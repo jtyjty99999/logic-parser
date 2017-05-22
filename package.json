@@ -1,0 +1,30 @@
+{
+  "name": "logic-parser",
+  "version": "0.1.0",
+  "description": "logic parser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtyjty99999/logic-parser.git"
+  },
+  "dependencies": {
+    "escodegen": "^1.8.1"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "enzyme": "^2.4.1",
+    "expect": "^1.20.2",
+    "expect.js": "^0.3",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.1.2",
+    "browserify": "^13.0.1",
+    "esprima": "^2.7.2",
+    "static-eval": "^0.2.4"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --recursive --recursive \"./test/*\" --require tests-setup.js",
+    "build": "browserify demo/index.js > demo/bundle.js"
+  }
+}
